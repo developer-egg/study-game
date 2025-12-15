@@ -1,0 +1,24 @@
+{
+  "vocabulary": [
+    {
+      "question": "مرحبا",
+      "answer": "hello"
+    },
+    {
+      "question": "شكرا",
+      "answer": "thank you"
+    },
+    {
+      "question": "كتاب",
+      "answer": "book"
+    },
+    {
+      "question": "ماء",
+      "answer": "water"
+    },
+    {
+      "question": "بيت",
+      "answer": "house"
+    }
+  ]
+}
