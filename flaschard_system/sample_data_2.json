@@ -1,0 +1,16 @@
+{
+  "vocabulary": [
+    {
+      "question": "bonjour",
+      "answer": "hello"
+    },
+    {
+      "question": "merci",
+      "answer": "thank you"
+    },
+    {
+      "question": "livre",
+      "answer": "book"
+    }
+  ]
+}

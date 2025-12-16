@@ -3,7 +3,7 @@ import json
 class FlashcardModel:
     flashcard_data_filepath = None
     flashcard_data_as_dictionary = None
-    flashcard_data_as_objects = []
+    flashcard_data_as_list = None
 
     def __init__(self):
         pass
@@ -15,4 +15,13 @@ class FlashcardModel:
         with open(self.flashcard_data_filepath, mode="r", encoding="utf-8") as flashcard_data_json:
             self.flashcard_data_as_dictionary = json.load(flashcard_data_json)
 
-        print(self.flashcard_data_as_dictionary)
+        # this makes a list with one item, a tuple. The tuple looks like this:
+        # ('vocabulary', [{}, {}, {}])
+        # the second item in the tuple is a list with the question/answer objects
+        self.flashcard_data_as_list = list(self.flashcard_data_as_dictionary.items())
+        
+        # clean the list up to be only a list with the question/answer objects
+        self.flashcard_data_as_list = self.flashcard_data_as_list[0][1]
+
+
+        
