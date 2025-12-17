@@ -5,12 +5,12 @@ class FlashcardView:
     def display_introduction(self):
         print("Welcome to the flashcard program. To import your flashcard data, provide your JSON file path: \n")
 
-    def display_question(self, question):
+    def display_question(self, question: str):
         print("Input the answer/meaning of this: \n")
-        print(question)
+        print(question + "\n")
 
-    def display_answer_result(self, isCorrect):
+    def display_answer_result(self, isCorrect: bool):
         if isCorrect:
-            print("Nice! That was the correct answer")
+            print("\nNice! That was the correct answer\n")
         else:
-            print(f"Not quite! Try again.")
+            print(f"\nNot quite! Try again next time. \n")

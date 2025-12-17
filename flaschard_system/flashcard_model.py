@@ -12,6 +12,9 @@ class FlashcardModel:
         self.flashcard_data_filepath = input()
 
     def retrieve_flashcard_data(self):
+        # in the future, the format of the data has to be clearly defined to the user. 
+        # there also needs to be validation for what file user inputs, and crash prevention in the case what they input is invalid
+
         with open(self.flashcard_data_filepath, mode="r", encoding="utf-8") as flashcard_data_json:
             self.flashcard_data_as_dictionary = json.load(flashcard_data_json)
 
@@ -23,7 +26,7 @@ class FlashcardModel:
         # clean the list up to be only a list with the question/answer objects
         self.flashcard_data_as_list = self.flashcard_data_as_list[0][1]
 
-    def process_question(self, question, correct_answer):
+    def process_question(self, question: str, correct_answer: str):
         user_answer = input()
 
         if correct_answer == user_answer:
