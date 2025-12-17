@@ -23,5 +23,12 @@ class FlashcardModel:
         # clean the list up to be only a list with the question/answer objects
         self.flashcard_data_as_list = self.flashcard_data_as_list[0][1]
 
+    def process_question(self, question, correct_answer):
+        user_answer = input()
+
+        if correct_answer == user_answer:
+            return True
+        else:
+            return False
 
         
