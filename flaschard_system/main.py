@@ -8,4 +8,4 @@ controller = FlashcardController(view=view, model=model)
 
 controller.introduction()
 # controller.ask_question("What color is the sky?", "blue")
-controller.question_loop(10, model.flashcard_data_as_list)
+controller.question_loop(3, model.card_objects_list)

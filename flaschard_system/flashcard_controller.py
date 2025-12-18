@@ -19,8 +19,8 @@ class FlashcardController:
     def question_loop(self, number_of_questions: int, questions_and_answers_list: list):
         for count in range(number_of_questions):
             current_set = random.choice(questions_and_answers_list)
-            current_question = current_set['question']
-            current_correct_answer = current_set['answer']
+            current_question = current_set.question
+            current_correct_answer = current_set.answer
             # print(f"Question: {current_question}, Answer: {current_correct_answer}")
 
             self.ask_question(current_question, current_correct_answer)
